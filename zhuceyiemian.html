@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户注册</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+       table,th,td
+     {
+     border:1px solid blue;
+     
+     }
+    </style>
+    <script type="text/javascript">
+    	function show_desc() {
+    		var desc =document.getElementById('userid_desc');
+    		desc.style.display ="block";
+    		console.log("yonghuming");
+    	}
+    	function hide_desc() {
+    		var desc =document.getElementById("userid_desc");
+    		desc.style.display ="none";
+    		console.log("yonghuming");
+    	}
+    	function show_desc_01() {
+    		var desc =document.getElementById('userid_desc_01');
+    		desc.style.display ="block";
+    		console.log("yonghumima");
+    	}
+    	function hide_desc_01() {
+    		var desc =document.getElementById("userid_desc_01");
+    		desc.style.display ="none";
+    		console.log("yonghumima");
+    	}
+    	function show_desc_02() {
+    		var desc =document.getElementById('userid_desc_02');
+    		desc.style.display ="block";
+    		console.log("querenmima");
+    	}
+    	function hide_desc_02() {
+    		var desc =document.getElementById("userid_desc_02");
+    		desc.style.display ="none";
+    		console.log("querenmima");
+    	}
+    	function show_desc_03() {
+    		var desc =document.getElementById('userid_desc_03');
+    		desc.style.display ="block";
+    		console.log("youxiang");
+    	}
+    	function hide_desc_03() {
+    		var desc =document.getElementById("userid_desc_03");
+    		desc.style.display ="none";
+    		console.log("youxiang");
+    	}
+
+
+
+
+
+    	function hide_desc(){
+          var name = document.testForm.firstname.value;
+             if (name.length > 2 && name.length < 6) {
+             
+             return true;
+             }
+             else {
+             	alert("长度大于2小于6个字符");
+            return false;
+        }
+    }
+
+
+   //*************************************************************************************************************
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <center>
+    <table border="1">
+    	<tr>
+    		<td><p style="color: red;">*注册说明：</p>注册资料在注册成功后可以进行修改，<br/>用户在本网站上的提供的信息如果有<br/>违法信息由用户自己承担</td>
+    	</tr>
+    </table>
+    <hr/>
+    </center>
+    <center>
+    
+    <form class="" action="index.html" method="post" name="testForm">
+    	<p style="color: blue;">注册名：</p>
+    	<input type="text" name="firstname" onfocus="show_desc()" onblur="hide_desc()"  id="yonghuming" placeholder="长度大于2小于6个字符" required/>
+    	</span><span style="color: red;">*</span><span style="color: red; display: none;" id="userid_desc" class="desc" style="display:none;">1.不能为空且不能有空格。<br/>2.*、@、#、￥、%、&等特殊符号不能用<br/>3.长度大于2小于6个字符。</span><br/>
+    	身份：<br/><br/><form>
+
+              <select name="中华人民共和国公民" selected="中华人民共和国公民">中华人民共和国公民</option>
+              <option value="海外侨胞">海外侨胞</option>
+              <option value="外籍华人">外籍华人</option>
+              <option value="中华人民共和国公民">中华人民共和国公民</option>
+              <option value="外国友人">外国友人</option>
+              </select>
+              </form>
+        <p style="color: blue;">用户密码：</p>
+
+    	<input type="password" name="password" onfocus="show_desc_01()" onblur="hide_desc_01()" id="yonghumima" placeholder="长度大于6小于16个字符" required/>
+    	    <span style="color: red;">*</span>
+    	         <span style="color: red; display: none;" id="userid_desc_01" class="desc" style="display:none;">1.不能为空且不能使用空格。<br/>
+    	         2.不可以使用中文。<br/>
+    	         3.长度大于6小于16个字符。
+    	         </span><br/>
+    	<p style="color: blue;">确认密码：</p>
+
+    	<input type="password" name="password" onfocus="show_desc_02()" onblur="hide_desc_02()" id="querenmima" placeholder="必须与用户密码完全一致" required/>
+            <span style="color: red;">*</span>
+            <span style="color: red; display: none;" id="userid_desc_02" class="desc" style="display:none;">必须与用户密码完全一致。<br/></span><br/>
+    	<p style="color: blue;">邮箱：</p>
+
+    	<input type="text" name="firstname" onfocus="show_desc_03()" onblur="hide_desc_03()"  id="youxiang" placeholder="xxx@xxx.com" required/>
+    	    <span style="color: red;">*</span>
+    	    <span style="color: red; display: none;" id="userid_desc_03" class="desc" style="display:none;">
+    	    格式必须为：xxx@xxx.com<br/></span><br/><br/>
+
+
+        <input type="submit"  onclick="show_desc()" value="注册用户">
+        <input type="submit"  onclick="show_desc()" value="取消注册">
+    </form>
+    </div>
+    </center>
+</form>
+</body>
+</html>
